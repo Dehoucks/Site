@@ -1,0 +1,162 @@
+---
+title: "Evolution du GDP (%)"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+
+```
+
+
+
+Column {.tabset}
+-------------------------------------
+    
+### 1961
+    
+![](images/un.JPG) 
+
+###  1995
+
+![](images/1995.JPG) 
+
+### 2005
+    
+![](images/2005.JPG) 
+
+ 
+
+###  2016
+    
+![](images/2016.JPG) 
+
+### 2017
+    
+![](images/2017.JPG) 
+
+### 2018
+    
+![](images/2018.JPG) 
+   
+Column {.tabset}
+-------------------------------------
+
+
+### 1961
+```{r}
+library(leaflet)
+carte1961 <- data.frame(country=c("+2.3", "+10.2", "+3.8", "-27,27", "+4.98"), 
+lng=c(-101.35312118657167, -43.940933, 18.423300, 120.599998, 1.8883335),
+                             lat=c(38.426445684508536, -19.912998, -33.918861, 31.299999,35.603354 ))
+
+library(htmltools)
+
+
+leaflet() %>% 
+  addTiles() %>%
+  addLabelOnlyMarkers(data = carte1961, lng = ~lng, lat = ~lat, label = ~as.character(country), 
+                      labelOptions = labelOptions(noHide = T, direction = 'top', textOnly = T))
+```
+
+   
+###  1995
+
+```{r}
+library(leaflet)
+carte1961 <- data.frame(country=c("+2.6", "+4.4", "+3.1", "+10.9", "+2.1"), 
+lng=c(-101.35312118657167, -43.940933, 18.423300, 120.599998, 1.8883335),
+                             lat=c(38.426445684508536, -19.912998, -33.918861, 31.299999,35.603354 ))
+# états unis brésil afrique du sud chine france
+
+library(htmltools)
+
+
+leaflet() %>% 
+  addTiles() %>%
+  addLabelOnlyMarkers(data = carte1961, lng = ~lng, lat = ~lat, label = ~as.character(country), 
+                      labelOptions = labelOptions(noHide = T, direction = 'top', textOnly = T))
+```
+
+
+### 2005
+    
+```{r}
+library(leaflet)
+carte1961 <- data.frame(country=c("+3.5", "+3.2", "+5.2", "+11.3", "+1.6"), 
+lng=c(-101.35312118657167, -43.940933, 18.423300, 120.599998, 1.8883335),
+                             lat=c(38.426445684508536, -19.912998, -33.918861, 31.299999,35.603354 ))
+
+library(htmltools)
+
+
+leaflet() %>% 
+  addTiles() %>%
+  addLabelOnlyMarkers(data = carte1961, lng = ~lng, lat = ~lat, label = ~as.character(country), 
+                      labelOptions = labelOptions(noHide = T, direction = 'top', textOnly = T))
+```
+
+
+
+
+###  2016
+    
+```{r}
+library(leaflet)
+carte1961 <- data.frame(country=c( "-2.8", "+6.7", "+1.09"), 
+lng=c(18.1236723, 100.599998, 1.8883335),
+                             lat=c(20.8234472, 31.299999,40.603354 ))
+#Lybie / Chine / France
+library(htmltools)
+
+
+leaflet() %>% 
+  addTiles() %>%
+  addLabelOnlyMarkers(data = carte1961, lng = ~lng, lat = ~lat, label = ~as.character(country), 
+                      labelOptions = labelOptions(noHide = T, direction = 'top', textOnly = T))
+```
+
+
+### 2017
+    
+```{r}
+library(leaflet)
+carte1961 <- data.frame(country=c( "+26.6", "+6.7", "+2.26"), 
+lng=c(18.1236723, 100.599998, 1.8883335),
+                             lat=c(20.8234472, 31.299999,40.603354 ))
+
+library(htmltools)
+
+
+leaflet() %>% 
+  addTiles() %>%
+  addLabelOnlyMarkers(data = carte1961, lng = ~lng, lat = ~lat, label = ~as.character(country), 
+                      labelOptions = labelOptions(noHide = T, direction = 'top', textOnly = T))
+```
+ 
+
+### 2018
+    
+```{r}
+library(leaflet)
+carte1961 <- data.frame(country=c( "+7.9", "+6.5", "+1.7"), 
+lng=c(18.1236723, 100.599998, 1.8883335),
+                             lat=c(20.8234472, 31.299999,40.603354 ))
+
+library(htmltools)
+
+
+leaflet() %>% 
+  addTiles() %>%
+  addLabelOnlyMarkers(data = carte1961, lng = ~lng, lat = ~lat, label = ~as.character(country), 
+                      labelOptions = labelOptions(noHide = T, direction = 'top', textOnly = T))
+
+
+
+```
+
+
+
